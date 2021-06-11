@@ -86,17 +86,20 @@
                         <div class="card-body">
                             <ul class="nav flex-column nav-pills">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#">Active</a>
+                                    <a class="nav-link {{ Request::is('home') ? 'active' : '' }}"
+                                       href="{{route('home')}}">Главная</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
+                                    <a class="nav-link {{ Request::is('category') ? 'active' : '' }}"
+                                       href="{{route('category.index')}}">Категории</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Link</a>
+                                    <a class="nav-link {{ Request::is('post') ? 'active' : '' }}"
+                                       href="{{route('post.index')}}">Посты</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link disabled" href="#" tabindex="-1"
-                                       aria-disabled="true">Disabled</a>
+                                    <a class="nav-link {{ Request::is('user') ? 'active' : '' }}"
+                                       href="{{route('user.index')}}">Пользователи</a>
                                 </li>
                             </ul>
                         </div>
